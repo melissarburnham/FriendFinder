@@ -10,10 +10,10 @@ module.exports = function(app) {
 
     //add new friend...NEEDS MORE!
     app.post("/api/friends", function(req, res) {
-        var newFriend = req.body;
-        console.log(newFriend);
-        friends.push(newFriend);
-        res.json(newFriend);
+        var newFriendArray = req.body;
+        console.log(newFriendArray);
+        friends.push(newFriendArray);
+        res.json(newFriendArray);
       });
     
 }

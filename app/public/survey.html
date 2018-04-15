@@ -134,6 +134,7 @@
              <button type="submit" class="btn btn-default btn-primary" id="submit">Submit</button>
         </div>
     </div>
+    <br>
     <footer class="footer">
         <div class="container">
             <p>Control Panel</p>
@@ -144,9 +145,33 @@
             </p>
         </div>
     </footer>
-<!-- <script src="../../assets/survey.js"></script> -->
-<script src="../../app/data/friends.js"></script>  
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+        $("#submit").on("click", function(event) {
+                event.preventDefault();
+
+                var newFriend = {
+                        name: $("#name").val().trim(),
+                        picture: $("#picture").val().trim(),
+                        scores: [
+                        $('#qOne').val().trim(),
+                        $('#qTwo').val().trim(),
+                        $('#qThree').val().trim(),
+                        $('#qFour').val().trim(),
+                        $('#qFive').val().trim(),
+                        $('#qSix').val().trim(),
+                        $('#qSeven').val().trim(),
+                        $('#qEight').val().trim(),
+                        $('#qNine').val().trim(),
+                        $('#qTen').val().trim()
+                        ]
+                };
+        $.post("/api/friends", newFriend)
+        .then(function(data) {
+        alert("You've been added to our database.");
+      });
+    });
+</script>
 </body>
 </html>
