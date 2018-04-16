@@ -18,9 +18,9 @@
       <hr>
       <h3>About You</h3>
       <h4>Name (required)</h4>
-      <input type="text" id="name">
+      <input type="text" id="name" class="required">
       <h4>Link to photo image (required)</h4>
-      <input type="text" id="picture">
+      <input type="text" id="picture" class="required">
       <hr>
 
       <div class="row">
@@ -28,7 +28,7 @@
             <div id="questions">
                 <h2>Question 1</h2>
                 <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qOne">
+                <select class="chosen-select" id="qOne" class="required">
                         <option value></option>
                         <option value="1">1 (strongly disagree)</option>
                         <option value="2">2</option>
@@ -38,7 +38,7 @@
                 </select>
                 <h2>Question 2</h2>
                 <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qTwo">
+                <select class="chosen-select" id="qTwo" class="required">
                         <option value></option>
                         <option value="1">1 (strongly disagree)</option>
                         <option value="2">2</option>
@@ -48,7 +48,7 @@
                 </select>
                 <h2>Question 3</h2>
                 <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qThree">
+                <select class="chosen-select" id="qThree" class="required">
                         <option value></option>
                         <option value="1">1 (strongly disagree)</option>
                         <option value="2">2</option>
@@ -58,7 +58,7 @@
                 </select>
                 <h2>Question 4</h2>
                 <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qFour">
+                <select class="chosen-select" id="qFour" class="required">
                         <option value></option>
                         <option value="1">1 (strongly disagree)</option>
                         <option value="2">2</option>
@@ -68,7 +68,7 @@
                 </select>
                 <h2>Question 5</h2>
                 <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qFive">
+                <select class="chosen-select" id="qFive" class="required">
                         <option value></option>
                         <option value="1">1 (strongly disagree)</option>
                         <option value="2">2</option>
@@ -78,7 +78,7 @@
                 </select>
                 <h2>Question 6</h2>
                 <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qSix">
+                <select class="chosen-select" id="qSix" class="required">
                         <option value></option>
                         <option value="1">1 (strongly disagree)</option>
                         <option value="2">2</option>
@@ -88,7 +88,7 @@
                 </select>
                 <h2>Question 7</h2>
                 <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qSeven">
+                <select class="chosen-select" id="qSeven" class="required">
                         <option value></option>
                         <option value="1">1 (strongly disagree)</option>
                         <option value="2">2</option>
@@ -98,7 +98,7 @@
                 </select>
                 <h2>Question 8</h2>
                 <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qEight">
+                <select class="chosen-select" id="qEight" class="required">
                         <option value></option>
                         <option value="1">1 (strongly disagree)</option>
                         <option value="2">2</option>
@@ -108,7 +108,7 @@
                 </select>
                 <h2>Question 9</h2>
                 <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qNine">
+                <select class="chosen-select" id="qNine" class="required">
                         <option value></option>
                         <option value="1">1 (strongly disagree)</option>
                         <option value="2">2</option>
@@ -118,7 +118,7 @@
                 </select>
                 <h2>Question 10</h2>
                 <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qTen">
+                <select class="chosen-select" id="qTen" class="required">
                         <option value></option>
                         <option value="1">1 (strongly disagree)</option>
                         <option value="2">2</option>
@@ -149,8 +149,25 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script>
         $("#submit").on("click", function(event) {
-                event.preventDefault();
+          event.preventDefault();
+                
+          isValid = true;
+          $('.required').each(function() {
+          if ( $(this).val() === '' ){
+            isValid = false;
+          } else {
+            isValid = true;
+            }
+          return isValid
+            })
+          if (isValid == false){
+            alert ("Please answer all questions.")
+          } else {
+            addToDatabase();
+          }
+        });
 
+        function addToDatabase(){
                 var newFriend = {
                         name: $("#name").val().trim(),
                         picture: $("#picture").val().trim(),
@@ -172,10 +189,12 @@
         alert("You've been added to our database.");
       });
 
+        
+
       //check to see if all areas are filled out
       //create pop up after submission
       //clear field after submission
-    });
+    }
 </script>
 </body>
 </html>
