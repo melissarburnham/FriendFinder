@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Survey</title>
-      <!--Bootstrap link -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Survey</title>
+    <!--Bootstrap link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- favicon link -->
   <link rel="icon" type="image/ico" href="../../assets/images/favicon.ico">
-   <!-- Link to the jQuery Library -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- link to css -->
+  <link rel="stylesheet" href="../app.css">
 </head>
-<body>
+<body id="survey_body">
     <div class="container">
       <h1>Survey Questions</h1>
       <hr>
@@ -22,179 +24,205 @@
       <h4>Link to photo image (required)</h4>
       <input type="text" id="picture" class="required">
       <hr>
-
+<!-- survey questions -->
       <div class="row">
         <div class="col-lg-12">
-            <div id="questions">
-                <h2>Question 1</h2>
-                <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qOne" class="required">
-                        <option value></option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>  
-                        <option value="5">5 (strongly agree)</option>           
-                </select>
-                <h2>Question 2</h2>
-                <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qTwo" class="required">
-                        <option value></option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>  
-                        <option value="5">5 (strongly agree)</option>           
-                </select>
-                <h2>Question 3</h2>
-                <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qThree" class="required">
-                        <option value></option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>  
-                        <option value="5">5 (strongly agree)</option>           
-                </select>
-                <h2>Question 4</h2>
-                <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qFour" class="required">
-                        <option value></option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>  
-                        <option value="5">5 (strongly agree)</option>           
-                </select>
-                <h2>Question 5</h2>
-                <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qFive" class="required">
-                        <option value></option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>  
-                        <option value="5">5 (strongly agree)</option>           
-                </select>
-                <h2>Question 6</h2>
-                <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qSix" class="required">
-                        <option value></option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>  
-                        <option value="5">5 (strongly agree)</option>           
-                </select>
-                <h2>Question 7</h2>
-                <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qSeven" class="required">
-                        <option value></option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>  
-                        <option value="5">5 (strongly agree)</option>           
-                </select>
-                <h2>Question 8</h2>
-                <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qEight" class="required">
-                        <option value></option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>  
-                        <option value="5">5 (strongly agree)</option>           
-                </select>
-                <h2>Question 9</h2>
-                <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qNine" class="required">
-                        <option value></option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>  
-                        <option value="5">5 (strongly agree)</option>           
-                </select>
-                <h2>Question 10</h2>
-                <h3>Dogs are the best animal.</h3>
-                <select class="chosen-select" id="qTen" class="required">
-                        <option value></option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>  
-                        <option value="5">5 (strongly agree)</option>           
-                </select>
-            </div>
+          <div id="questions">
+            <h2>Question 1</h2>
+            <h3>I make friends easily.</h3>
+            <select class="chosen-select" id="qOne" class="required">
+              <option value></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>  
+              <option value="5">5 (strongly agree)</option>           
+            </select>
+            <h2>Question 2</h2>
+            <h3>I am always busy.</h3>
+            <select class="chosen-select" id="qTwo" class="required">
+              <option value></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>  
+              <option value="5">5 (strongly agree)</option>           
+            </select>
+            <h2>Question 3</h2>
+            <h3>I can't stand confrontation.</h3>
+            <select class="chosen-select" id="qThree" class="required">
+              <option value></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>  
+              <option value="5">5 (strongly agree)</option>           
+            </select>
+            <h2>Question 4</h2>
+            <h3>I dislike talking about myself.</h3>
+            <select class="chosen-select" id="qFour" class="required">
+              <option value></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>  
+              <option value="5">5 (strongly agree)</option>           
+            </select>
+            <h2>Question 5</h2>
+            <h3>I choose my words with care.</h3>
+            <select class="chosen-select" id="qFive" class="required">
+              <option value></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>  
+              <option value="5">5 (strongly agree)</option>           
+            </select>
+            <h2>Question 6</h2>
+            <h3>I am interesed in many things.</h3>
+            <select class="chosen-select" id="qSix" class="required">
+              <option value></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>  
+              <option value="5">5 (strongly agree)</option>           
+            </select>
+            <h2>Question 7</h2>
+            <h3>I get stressed out easily.</h3>
+            <select class="chosen-select" id="qSeven" class="required">
+              <option value></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>  
+              <option value="5">5 (strongly agree)</option>           
+            </select>
+            <h2>Question 8</h2>
+            <h3>I am observant of others' feelings.</h3>
+            <select class="chosen-select" id="qEight" class="required">
+              <option value></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>  
+              <option value="5">5 (strongly agree)</option>           
+            </select>
+            <h2>Question 9</h2>
+            <h3>I experience emotions intensely.</h3>
+            <select class="chosen-select" id="qNine" class="required">
+              <option value></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>  
+              <option value="5">5 (strongly agree)</option>           
+            </select>
+            <h2>Question 10</h2>
+            <h3>I love hotdogs.</h3>
+            <select class="chosen-select" id="qTen" class="required">
+              <option value></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>  
+              <option value="5">5 (strongly agree)</option>           
+            </select>
           </div>
         </div>
+      </div>
         <hr>
-        <div class="btnContainer">
-             <button type="submit" class="btn btn-default btn-primary" id="submit">Submit</button>
+      <div class="btnContainer">
+            <button type="submit" class="btn btn-default btn-primary" id="submit">Submit</button>
+      </div>
+
+      <!-- modal pop up to display best match -->
+      <div class="modal fade" id="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal_title">Your New Best Friend</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div id="modal_name"></div>
+                  <div id="modal_picture"></div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
     <br>
     <footer class="footer">
-        <div class="container">
-            <p>Control Panel</p>
-            <p>
-            <a href="/api/friends">API List</a>
-            | 
-            <a href="https://github.com/melissarburnham/FriendFinder">Github Repo</a>
-            </p>
-        </div>
+
+      <!-- links at bottom of the page -->
+      <div class="container">
+        <p>Control Panel</p>
+        <p>
+        <a href="/api/friends" class="controlPanel">API List</a>
+        | 
+        <a href="https://github.com/melissarburnham/FriendFinder" class="controlPanel">Github Repo</a>
+        </p>
+      </div>
     </footer>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script>
-        $("#submit").on("click", function(event) {
-          event.preventDefault();
-                
-          isValid = true;
-          $('.required').each(function() {
-          if ( $(this).val() === '' ){
-            isValid = false;
-          } else {
-            isValid = true;
-            }
-          return isValid
-            })
-          if (isValid == false){
-            alert ("Please answer all questions.")
-          } else {
-            addToDatabase();
-          }
-        });
-
-        function addToDatabase(){
-                var newFriend = {
-                        name: $("#name").val().trim(),
-                        picture: $("#picture").val().trim(),
-                        scores: [
-                        $('#qOne').val().trim(),
-                        $('#qTwo').val().trim(),
-                        $('#qThree').val().trim(),
-                        $('#qFour').val().trim(),
-                        $('#qFive').val().trim(),
-                        $('#qSix').val().trim(),
-                        $('#qSeven').val().trim(),
-                        $('#qEight').val().trim(),
-                        $('#qNine').val().trim(),
-                        $('#qTen').val().trim()
-                        ]
-                };
-        $.post("/api/friends", newFriend)
-        .then(function(data) {
-        alert("You've been added to our database.");
-      });
-
-        
-
-      //check to see if all areas are filled out
-      //create pop up after submission
-      //clear field after submission
+// after you click submit...
+  $("#submit").on("click", function(event) {
+    event.preventDefault();
+    //check to see if all fields are filled out       
+    isValid = true;
+    $('.required').each(function() {
+    if ( $(this).val() === '' ){
+      isValid = false;
+    } else {
+      isValid = true;
+      }
+    return isValid
+      })
+    if (isValid == false){
+      alert ("Please answer all questions.")
+    } else {
+      //clear fields and run addToDatabase function
+      $(".required").val("");    
+      $('.chosen-select').val('').trigger('chosen:updated');     
+      addToDatabase();   
+      $("#modal").modal('toggle');      
     }
+  });
+
+  function addToDatabase(){
+    var newFriend = {
+      name: $("#name").val().trim(),
+      picture: $("#picture").val().trim(),
+      scores: [
+      $('#qOne').val().trim(),
+      $('#qTwo').val().trim(),
+      $('#qThree').val().trim(),
+      $('#qFour').val().trim(),
+      $('#qFive').val().trim(),
+      $('#qSix').val().trim(),
+      $('#qSeven').val().trim(),
+      $('#qEight').val().trim(),
+      $('#qNine').val().trim(),
+      $('#qTen').val().trim()
+      ]   
+    };
+  $.post("/api/friends", newFriend)
+  .then(function(data) {
+  alert("You've been added to our database.");
+  $("#modal_name").append(data[0].name);
+  $("#modal_picture").attr("src", data[0].name);
+  
+  });
+      //create pop up after submission that displays picture and name
+}
 </script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+#home_body {
+  background-image: url('../../assets/images/background.jpg');  
+}
+
+#survey_body{
+  background: rgb(30, 130, 115);
+  color: white;
+}
+
+#title{
+  font-size: 100px;
+}
+
+#title, 
+#subtitle, 
+.controlPanel {
+  color: white;  
+}
+
+#goToSurvey {
+  background: white;
+  color: black;
+}
+#goToSurvey:hover{
+  background: black;
+  color: white;
+}
+
+.controlPanel:hover {
+  color: black;
+}

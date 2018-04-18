@@ -10,26 +10,30 @@
   <link rel="icon" type="image/ico" href="../../assets/images/favicon.ico">
    <!-- Link to the jQuery Library -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!-- link to css -->
+   <link rel="stylesheet" href="../app.css">
 </head>
-<body>
+<body id="home_body">
 
   <div class="container">
-    <div class="jumbotron">
+    <!-- <div class="jumbotron"> -->
       <div class="text-center">
-        <h1><span class="glyphicon glyphicon-search"></span> FriendFinder</h1>
+        <h1 id="title"><span class="glyphicon glyphicon-search"></span> FriendFinder</h1>
       </div>
       <hr>
+      <br><br><br><br>
       <div class="text-center">
-        <h3>Because making friends is hard!</h3>
+        <h3 id="subtitle">Because making friends is hard!</h3>
       </div>
+      <br><br><br><br>
 
       <!-- View Tables Button -->
       <div class="row">
         <div class="text-center">
-          <a href="survey.html"><button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-list-alt"></span> Go to survey!</button></a>
+          <a href="survey.html"><button id="goToSurvey" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-list-alt"></span> Go to survey!</button></a>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
   </div>
   <script src="../../app/data/friends.js"></script>    
   <script src="https://code.jquery.com/jquery.js"></script>
