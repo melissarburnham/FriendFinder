@@ -4,7 +4,10 @@
 
 #survey_body{
   background: rgb(30, 130, 115);
-  color: white;
+}
+
+.text {
+  color: white;  
 }
 
 #title{

@@ -16,20 +16,20 @@
 </head>
 <body id="survey_body">
     <div class="container">
-      <h1>Survey Questions</h1>
+      <h1 class="text">Survey Questions</h1>
       <hr>
-      <h3>About You</h3>
-      <h4>Name (required)</h4>
+      <h3 class="text">About You</h3>
+      <h4 class="text">Name (required)</h4>
       <input type="text" id="name" class="required">
-      <h4>Link to photo image (required)</h4>
+      <h4 class="text">Link to photo image (required)</h4>
       <input type="text" id="picture" class="required">
       <hr>
 <!-- survey questions -->
       <div class="row">
         <div class="col-lg-12">
           <div id="questions">
-            <h2>Question 1</h2>
-            <h3>I make friends easily.</h3>
+            <h2 class="text">Question 1</h2>
+            <h3 class="text">I make friends easily.</h3>
             <select class="chosen-select" id="qOne" class="required">
               <option value></option>
               <option value="1">1 (strongly disagree)</option>
@@ -38,8 +38,8 @@
               <option value="4">4</option>  
               <option value="5">5 (strongly agree)</option>           
             </select>
-            <h2>Question 2</h2>
-            <h3>I am always busy.</h3>
+            <h2 class="text">Question 2</h2>
+            <h3 class="text">I am always busy.</h3>
             <select class="chosen-select" id="qTwo" class="required">
               <option value></option>
               <option value="1">1 (strongly disagree)</option>
@@ -48,8 +48,8 @@
               <option value="4">4</option>  
               <option value="5">5 (strongly agree)</option>           
             </select>
-            <h2>Question 3</h2>
-            <h3>I can't stand confrontation.</h3>
+            <h2 class="text">Question 3</h2>
+            <h3 class="text">I can't stand confrontation.</h3>
             <select class="chosen-select" id="qThree" class="required">
               <option value></option>
               <option value="1">1 (strongly disagree)</option>
@@ -58,8 +58,8 @@
               <option value="4">4</option>  
               <option value="5">5 (strongly agree)</option>           
             </select>
-            <h2>Question 4</h2>
-            <h3>I dislike talking about myself.</h3>
+            <h2 class="text">Question 4</h2>
+            <h3 class="text">I dislike talking about myself.</h3>
             <select class="chosen-select" id="qFour" class="required">
               <option value></option>
               <option value="1">1 (strongly disagree)</option>
@@ -68,8 +68,8 @@
               <option value="4">4</option>  
               <option value="5">5 (strongly agree)</option>           
             </select>
-            <h2>Question 5</h2>
-            <h3>I choose my words with care.</h3>
+            <h2 class="text">Question 5</h2>
+            <h3 class="text">I choose my words with care.</h3>
             <select class="chosen-select" id="qFive" class="required">
               <option value></option>
               <option value="1">1 (strongly disagree)</option>
@@ -78,8 +78,8 @@
               <option value="4">4</option>  
               <option value="5">5 (strongly agree)</option>           
             </select>
-            <h2>Question 6</h2>
-            <h3>I am interesed in many things.</h3>
+            <h2 class="text">Question 6</h2>
+            <h3 class="text">I am interesed in many things.</h3>
             <select class="chosen-select" id="qSix" class="required">
               <option value></option>
               <option value="1">1 (strongly disagree)</option>
@@ -88,8 +88,8 @@
               <option value="4">4</option>  
               <option value="5">5 (strongly agree)</option>           
             </select>
-            <h2>Question 7</h2>
-            <h3>I get stressed out easily.</h3>
+            <h2 class="text">Question 7</h2>
+            <h3 class="text">I get stressed out easily.</h3>
             <select class="chosen-select" id="qSeven" class="required">
               <option value></option>
               <option value="1">1 (strongly disagree)</option>
@@ -98,8 +98,8 @@
               <option value="4">4</option>  
               <option value="5">5 (strongly agree)</option>           
             </select>
-            <h2>Question 8</h2>
-            <h3>I am observant of others' feelings.</h3>
+            <h2 class="text">Question 8</h2>
+            <h3 class="text">I am observant of others' feelings.</h3>
             <select class="chosen-select" id="qEight" class="required">
               <option value></option>
               <option value="1">1 (strongly disagree)</option>
@@ -108,8 +108,8 @@
               <option value="4">4</option>  
               <option value="5">5 (strongly agree)</option>           
             </select>
-            <h2>Question 9</h2>
-            <h3>I experience emotions intensely.</h3>
+            <h2 class="text">Question 9</h2>
+            <h3 class="text">I experience emotions intensely.</h3>
             <select class="chosen-select" id="qNine" class="required">
               <option value></option>
               <option value="1">1 (strongly disagree)</option>
@@ -118,8 +118,8 @@
               <option value="4">4</option>  
               <option value="5">5 (strongly agree)</option>           
             </select>
-            <h2>Question 10</h2>
-            <h3>I love hotdogs.</h3>
+            <h2 class="text">Question 10</h2>
+            <h3 class="text">I love hotdogs.</h3>
             <select class="chosen-select" id="qTen" class="required">
               <option value></option>
               <option value="1">1 (strongly disagree)</option>
@@ -177,25 +177,23 @@
   $("#submit").on("click", function(event) {
     event.preventDefault();
     //check to see if all fields are filled out       
-    isValid = true;
+    var isValid;
     $('.required').each(function() {
-    if ( $(this).val() === '' ){
-      isValid = false;
-    } else {
-      isValid = true;
-      }
-    return isValid
+      isValid = $(this).val() !== '' ? true : false;
       })
-    if (isValid == false){
+    if (!isValid){
       alert ("Please answer all questions.")
     } else {
       //clear fields and run addToDatabase function
-      $(".required").val("");    
-      $('.chosen-select').val('').trigger('chosen:updated');     
       addToDatabase();   
       $("#modal").modal('toggle');      
     }
   });
+
+  function clearAnswers (){
+    $(".required").val("");  
+    $('.chosen-select').val('').trigger('chosen:updated');           
+  }
 
   function addToDatabase(){
     var newFriend = {
@@ -215,13 +213,12 @@
       ]   
     };
   $.post("/api/friends", newFriend)
-  .then(function(data) {
-  alert("You've been added to our database.");
-  $("#modal_name").append(data[0].name);
-  $("#modal_picture").attr("src", data[0].name);
-  
+  .then(function(bestMatch) {
+  $("#modal_name").append(newUser.name);
+  $("#modal_picture").attr("src", newUser.score);
   });
-      //create pop up after submission that displays picture and name
+  clearAnswers();   
+  //create pop up after submission that displays picture and name
 }
 </script>
 </body>
