@@ -4,6 +4,7 @@
 
 #survey_body{
   background: rgb(30, 130, 115);
+  text-align: center;
 }
 
 .text {
@@ -31,4 +32,19 @@
 
 .controlPanel:hover {
   color: black;
+}
+
+#left, #right {
+  position: fixed;
+  width: 17%;
+  height: 100%;
+  top: 0
+}
+#left {
+  background: white;
+  left: 0
+}
+#right {
+  background: white;
+  right: 0
 }

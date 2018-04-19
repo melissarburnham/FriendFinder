@@ -8,54 +8,50 @@ module.exports = function(app) {
 		res.json(friends);
     });
 
-    //add new friend...NEEDS MORE!
-        //loop through friendListArray.score, add up all scores, 
-        //and subtract from sum of newFriend array (look up absolute)
     app.post("/api/friends", function(req, res) {
         var newUser = req.body;
-        var newScore = 0;
-        var newScoreArray= [];
-        var oldScoresArray =[];
-        var newUserScores = newUser.scores;
-        var oldScoreSum;
-        // console.log(newUser.scores);
-        res.send(newUser);
+        var newUserScores = newUser.scores;        
+        var scoreArray= [];
+        var newBestFriend;
+        var differenceArray = [];
+        var bestMatch = 0; 
 
-        for(var i = 0; i < newUserScores.length; i++){
-            //turns all scores into integers
-            newUserScores[i] = +newUserScores[i];
-            newScoreArray.push(newUserScores[i]);
-        } 
-        //add all numbers in newScoreArray
-        var newScoreSum = newScoreArray.reduce(add, 0);
-        function add(a, b) {
-        return a + b;
-        }
+        var newFriend = {
+            name: newUser.name,
+            photo: newUser.photo,
+            scores: []
+          };
+    
 
-
-        friends.forEach(element => {
-            oldScoreSum = element.scores.reduce(add,0);
-            function add(a, b) {
-                return parseInt(a) + parseInt(b);
-            }
-            oldScoresArray.push(oldScoreSum);
-        });
-
-        // oldScoresArray.forEach(element => {
-        //     oldScoresArray = +oldScoresArray;                                    
-        // });
-
-            
-        
+  for(var i=0; i < newUserScores.length; i++){
+    scoreArray.push( parseInt(newUserScores[i]) )
+  }
+    newFriend.scores = scoreArray;
 
 
-        console.log("NEW SUM:" + newScoreSum); 
-        console.log("NEW:" + newScoreArray);
-        console.log("OLD:" + oldScoresArray);
-        
-        // res.send(bestMatch);
-        friends.push(newUser);
-     });
+  for(var i=0; i < friends.length; i++){
+    var difference = 0;
+    for(var j=0; j < newFriend.scores.length; j++){
+      difference += Math.abs( newFriend.scores[j] - friends[i].scores[j] );
+    }
+    differenceArray.push(difference);
+  }
+
+  for(var i=1; i < differenceArray.length; i++){
+    
+    if(differenceArray[i] <= differenceArray[bestMatch]){
+      bestMatch = i;
+    }
+
+  }
+  var newBestFriend = friends[bestMatch];
+  console.log(newBestFriend);
+  res.json(newBestFriend);
+
+  friends.push(newFriend);
+
+});
+
 }
 
-// 
+
