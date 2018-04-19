@@ -186,17 +186,15 @@
     if (!isValid){
       alert ("Please answer all questions.")
     } else {
-      //clear fields and run addToDatabase function
       addToDatabase();   
     }
   });
 
   function clearAnswers (){
-    //can I just do a location.reload();?
     $(".required").val("");  
-    $('.chosen-select').val('').trigger('chosen:updated');   
-    $('#modal_name').val('');        
-    $('#modal_picture').val('');            
+    $('.chosen-select').val("").trigger('chosen:updated');   
+    $('#modal_name').empty();        
+    $('#modal_picture').val("");            
   }
 
   function addToDatabase(){
@@ -220,12 +218,10 @@
   .then(function(newBestFriend) {
   $("#modal_name").append(newBestFriend.name);
   $("#modal_picture").attr("src", newBestFriend.picture);
-  // $("#modal_picture").append(newBestFriend.picture);  
   $("#modal").modal('toggle');      
   
   });
   clearAnswers();   
-  //create pop up after submission that displays picture and name
 }
 </script>
 </body>
