@@ -3,7 +3,7 @@
 }
 
 #survey_body{
-  background: rgb(30, 130, 115);
+  background: rgb(82, 108, 145);
   text-align: center;
 }
 
@@ -21,7 +21,8 @@
   color: white;  
 }
 
-#goToSurvey {
+#goToSurvey,
+#submit:hover {
   background: white;
   color: black;
 }
@@ -40,16 +41,20 @@
   height: 100%;
   top: 0
 }
-#left {
-  background: white;
+#left{
+  background-image: url('../../assets/images/starrynight.jpg');
   left: 0
 }
 #right {
-  background: white;
+  background-image: url('../../assets/images/starrynight.jpg');
   right: 0
 }
 
 #modal_picture{
   width: 300x;
   height: 300px;
+}
+
+#submit {
+  background: black;
 }
