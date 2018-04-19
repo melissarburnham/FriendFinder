@@ -150,7 +150,7 @@
               </div>
               <div class="modal-body">
                   <div id="modal_name"></div>
-                  <div id="modal_picture"></div>
+                  <img id="modal_picture" src="https://en.wikipedia.org/wiki/Goat">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -188,13 +188,14 @@
     } else {
       //clear fields and run addToDatabase function
       addToDatabase();   
-      $("#modal").modal('toggle');      
     }
   });
 
   function clearAnswers (){
     $(".required").val("");  
-    $('.chosen-select').val('').trigger('chosen:updated');           
+    $('.chosen-select').val('').trigger('chosen:updated');   
+    $('#modal_name').val('');        
+    $('#modal_picture').val('');            
   }
 
   function addToDatabase(){
@@ -215,9 +216,12 @@
       ]   
     };
   $.post("/api/friends", newFriend)
-  .then(function(bestMatch) {
-  $("#modal_name").append(newUser.name);
-  $("#modal_picture").attr("src", newUser.score);
+  .then(function(newBestFriend) {
+  $("#modal_name").append(newBestFriend.name);
+  // $("#modal_picture").attr("src", newBestFriend.picture);
+  // $("#modal_picture").append(newBestFriend.picture);  
+  $("#modal").modal('toggle');      
+  
   });
   clearAnswers();   
   //create pop up after submission that displays picture and name

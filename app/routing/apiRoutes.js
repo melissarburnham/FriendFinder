@@ -16,39 +16,37 @@ module.exports = function(app) {
         var differenceArray = [];
         var bestMatch = 0; 
 
-        var newFriend = {
+        var newUserFriend = {
             name: newUser.name,
             photo: newUser.photo,
             scores: []
           };
     
-
-  for(var i=0; i < newUserScores.length; i++){
-    scoreArray.push( parseInt(newUserScores[i]) )
-  }
-    newFriend.scores = scoreArray;
-
-
-  for(var i=0; i < friends.length; i++){
-    var difference = 0;
-    for(var j=0; j < newFriend.scores.length; j++){
-      difference += Math.abs( newFriend.scores[j] - friends[i].scores[j] );
+//loop through new scores, push to scoreArray and set to newUserFriend.scores
+    for(var i=0; i < newUserScores.length; i++){
+        scoreArray.push( parseInt(newUserScores[i]) )
     }
-    differenceArray.push(difference);
-  }
+        newUserFriend.scores = scoreArray;
 
-  for(var i=1; i < differenceArray.length; i++){
-    
-    if(differenceArray[i] <= differenceArray[bestMatch]){
-      bestMatch = i;
+//loop through friends in database, subtract from newUserFriend scores and push to difference array
+    for(var i=0; i < friends.length; i++){
+        var difference = 0;
+        for(var j=0; j < newUserFriend.scores.length; j++){
+        difference += Math.abs( newUserFriend.scores[j] - friends[i].scores[j] );
+        }
+        differenceArray.push(difference);
     }
+//loop through difference array to find the bestMatch position and set it to that index.
+    for(var i=1; i < differenceArray.length; i++){
+        if(differenceArray[i] <= differenceArray[bestMatch]){
+        bestMatch = i;
+        }
+    }
+    var newBestFriend = friends[bestMatch];
+    console.log(newBestFriend);
+    res.json(newBestFriend);
 
-  }
-  var newBestFriend = friends[bestMatch];
-  console.log(newBestFriend);
-  res.json(newBestFriend);
-
-  friends.push(newFriend);
+    friends.push(newUserFriend);
 
 });
 
