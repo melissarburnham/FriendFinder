@@ -24,7 +24,7 @@
       <h4 class="text">Name (required)</h4>
       <input type="text" id="name" class="required">
       <h4 class="text">Link to photo image (required)</h4>
-      <input type="text" id="picture" class="required">
+      <input type="url" id="picture" class="required">
       <hr>
 <!-- survey questions -->
       <div class="row">
@@ -202,7 +202,7 @@
   function addToDatabase(){
     var newFriend = {
       name: $("#name").val().trim(),
-      picture: $("#picture").val().trim(),
+      picture: $("#picture").val(),
       scores: [
       $('#qOne').val().trim(),
       $('#qTwo').val().trim(),

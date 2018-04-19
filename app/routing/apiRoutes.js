@@ -18,7 +18,7 @@ module.exports = function(app) {
 
         var newUserFriend = {
             name: newUser.name,
-            photo: newUser.photo,
+            picture: newUser.picture,
             scores: []
           };
     
