@@ -150,7 +150,7 @@
               </div>
               <div class="modal-body">
                   <div id="modal_name"></div>
-                  <img id="modal_picture" src="https://en.wikipedia.org/wiki/Goat">
+                  <img id="modal_picture" src="">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -192,6 +192,7 @@
   });
 
   function clearAnswers (){
+    //can I just do a location.reload();?
     $(".required").val("");  
     $('.chosen-select').val('').trigger('chosen:updated');   
     $('#modal_name').val('');        
@@ -218,7 +219,7 @@
   $.post("/api/friends", newFriend)
   .then(function(newBestFriend) {
   $("#modal_name").append(newBestFriend.name);
-  // $("#modal_picture").attr("src", newBestFriend.picture);
+  $("#modal_picture").attr("src", newBestFriend.picture);
   // $("#modal_picture").append(newBestFriend.picture);  
   $("#modal").modal('toggle');      
   
