@@ -13,13 +13,13 @@ body-parager NPM Package
 path NPM Package
 
 ## Screenshots
-Homescreen:
-![homescreen](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-Survey Questions:
-![survey](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-Result:
-![result](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-API List:
-![api](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+### Homescreen:
+![homescreen](https://github.com/melissarburnham/FriendFinder/blob/master/app/public/assets/images/Screen%20Shot%202018-04-21%20at%2010.45.35%20AM.png "Homescreen")
+### Survey Questions:
+![survey](https://github.com/melissarburnham/FriendFinder/blob/master/app/public/assets/images/Screen%20Shot%202018-04-21%20at%2010.45.48%20AM.png "survey")
+### Result:
+![result](https://github.com/melissarburnham/FriendFinder/blob/master/app/public/assets/images/Screen%20Shot%202018-04-21%20at%2010.46.37%20AM.png "result")
+### API List:
+![api](https://github.com/melissarburnham/FriendFinder/blob/master/app/public/assets/images/Screen%20Shot%202018-04-21%20at%2010.46.47%20AM.png "api list")
 
 
