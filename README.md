@@ -7,6 +7,7 @@ Click [here](https://hidden-sands-54999.herokuapp.com/) for a demo of this app o
 This app uses MySQL and express to match users to their new best friends. When a user answers a 10 question survey, a modal will pop up with a name and picture of the person with the most similar answers. Once a user answers, he/she is added to the possible best friends for others!
 
 ## Technologies Used
+MySQL <br>
 Node.js <br>
 express <br>
 body-parser 
