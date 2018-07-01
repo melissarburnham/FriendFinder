@@ -8,9 +8,8 @@ This app uses MySQL and express to match users to their new best friends. When a
 
 ## Technologies Used
 Node.js <br>
-express NPM Package <br>
-body-parager NPM Package <br>
-path NPM Package
+express <br>
+body-parser 
 
 ## Screenshots
 ### Homescreen:
